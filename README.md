@@ -1,1 +1,0 @@
-https://OleksandrVolodimirovich/rsschool-cv/cv
