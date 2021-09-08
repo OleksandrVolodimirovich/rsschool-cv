@@ -44,5 +44,8 @@
 * Self-Study - Always
 
 ## Experience
+---
+* Operator, Arterium LTD (2010 - for now)
+* Freelance (2020 - for now)
 
 ## Languages
