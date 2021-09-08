@@ -35,6 +35,13 @@
 ### *I am a Front-End developer looking for work with projects interesting. I like to delve into the essence of different technologies to understand the principles of their work. It helps me progress quickly and effectively. The main goal is to study as much as possible and consolidate the acquired knowledge in practice.*
 
 ## Education
+---
+* Galician Academy. 2010
+    * Profession: Business Economics
+* Courses:
+    * Markup academy - Javascript for HTML/CSS developer
+    * Solorern - HTML and CSS
+* Self-Study - Always
 
 ## Experience
 
