@@ -49,3 +49,7 @@
 * Freelance (2020 - for now)
 
 ## Languages
+---
+* English - Elementary
+* Ukrainian
+* Russian
