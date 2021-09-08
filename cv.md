@@ -21,8 +21,18 @@
 * Open Server
 
 ## Projects
+---
+
+>[DOMA](https://oleksandrvolodimirovich.github.io/LandingDoma/) - Landing Page for the sale of goods
+
+>[Delivery Food](https://oleksandrvolodimirovich.github.io/delivery-food/) - online food delivery service
+
+>[ЯTunes](https://oleksandrvolodimirovich.github.io/iTunes/) - media player for video, music and radio
+
 
 ## Summary
+---
+### *I am a Front-End developer looking for work with projects interesting. I like to delve into the essence of different technologies to understand the principles of their work. It helps me progress quickly and effectively. The main goal is to study as much as possible and consolidate the acquired knowledge in practice.*
 
 ## Education
 
