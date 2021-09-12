@@ -1,1 +1,1 @@
-https://OleksandrVolodimirovich/rsschool-cv/cv
+https://OleksandrVolodimirovich/rsschool-cv/
