@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="isotope.min.css">
+    <link rel="stylesheet" href="./arduino-light.min.css">
     <title>CV</title>
 </head>
 <body>
@@ -61,6 +61,12 @@
                     <a href="#experience">
                         <i class="fa fa-trophy" aria-hidden="true"></i>
                         <span>Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#code">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <span>Preview code</span>
                     </a>
                 </li>
             </ul>
@@ -182,7 +188,31 @@
                                     <span class="lang__item-country">Russian</span>
                                 </li>
                             </ul>
-                        </section>                    
+                        </section>
+<section class="code" id="code">
+    <h3 class="title">Preview code</h3>
+    <pre>
+        <code>
+    const prevTrack = () => {
+        if (trackIndex !== 0) {
+            trackIndex--;
+        } else {
+            trackIndex = playlist.length - 1;
+        }
+        loadTrack();
+    };
+
+    const nextTrack = () => {
+        if (trackIndex === playlist.length - 1) {
+            trackIndex = 0;
+        } else {
+            trackIndex++;
+        }
+        loadTrack();
+    };
+        </code>
+    </pre>
+</section>
                     </div>
                     <div class="main-right">
                         <section class="skill" id="skill">
