@@ -9,240 +9,328 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./arduino-light.min.css">
     <title>CV</title>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <figure class="avtar">
-                    <img class="avatar__img" src="img/avatar.jpg" alt="Oleksandr">
-                </figure>
-                <div class="info">
-                    <div class="info__name">
-                        <h1 class="info__name-first">Oleksandr
-                        <span class="info__name-second">Fazliiev</span>
-                        </h1>
-                        <div class="info__prof">Frontend Developer</div>
-                    </div>
-                    <ul class="info__contact">
-                        <li class="info__contact-item">
-                            <a href="https://www.linkedin.com/in/fazliiev/" class="info__contact-link">
-                                <svg class="info__contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
-                                </svg>
-                                <span class="info__contact-text">www.linkedin.com/in/fazliiev</span>
-                            </a>
-                        </li>
-                        <li class="info__contact-item">
-                            <a href="@Olexander_Fazliiev" class="info__contact-link">
-                                <svg class="info__contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
-                                </svg>
-                                <span class="info__contact-text">@Olexander_Fazliiev</span>
-                            </a>
-                        </li>
-                        <li class="info__contact-item">
-                            <a href="https://github.com/OleksandrVolodimirovich" class="info__contact-link">
-                                <svg class="info__contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                                    <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
-                                </svg>
-                                <span class="info__contact-text">github.com/OleksandrVolodimirovich</span>
-                            </a>
-                        </li>
+    <div class="body-wrapper">
+        <div class="left-menu">
+            <div class="hamburger active">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="left-menu__list">
+                <li>
+                    <a href="#profile">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <span>profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#education">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#education">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skill">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <span>Skill</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#project">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <span>Project</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#lang">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <span>Languages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <span>Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#code">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <span>Preview code</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <figure class="avtar">
+                        <img class="avatar__img" src="img/avatar.jpg" alt="Oleksandr">
+                    </figure>
+                    <div class="info">
+                        <div class="info__name">
+                            <h1 class="info__name-first">Oleksandr
+                            <span class="info__name-second">Fazliiev</span>
+                            </h1>
+                            <div class="info__prof">Frontend Developer</div>
+                        </div>
+                        <ul class="info__contact">
+                            <li class="info__contact-item">
+                                <a href="https://www.linkedin.com/in/fazliiev/" class="info__contact-link">
+                                    <svg class="info__contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                                    </svg>
+                                    <span class="info__contact-text">www.linkedin.com/in/fazliiev</span>
+                                </a>
+                            </li>
+                            <li class="info__contact-item">
+                                <a href="@Olexander_Fazliiev" class="info__contact-link">
+                                    <svg class="info__contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+                                    </svg>
+                                    <span class="info__contact-text">@Olexander_Fazliiev</span>
+                                </a>
+                            </li>
+                            <li class="info__contact-item">
+                                <a href="https://github.com/OleksandrVolodimirovich" class="info__contact-link">
+                                    <svg class="info__contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                        <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                                    </svg>
+                                    <span class="info__contact-text">github.com/OleksandrVolodimirovich</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
                         
-                    </ul>
-                    
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <main class="main">
-        <div class="container">
-            <div class="main__wrapper">
-                <div class="main-left">
-                    <section class="profile">
-                        <h2 class="title">Profile</h2>
-                        <summary class="profile__text">
-                            I am a Front-End developer looking for work with projects interesting. I like to delve into the essence of different technologies to understand the principles of their work. It helps me progress quickly and effectively. The main goal is to study as much as possible and consolidate the acquired knowledge in practice.
-                        </summary>
-                        <ul class="profile__items">
-                            <li class="profile__item">
-                                <a class="profile__item-link" href="mailto:net_box@ukr.net">
-                                    <svg class="profile__item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path>
-                                    </svg>
-                                    <span class="profile__item-text">net_box@ukr.net</span>
-                                </a>
-                            </li>
-                            <li class="profile__item">
-                                <a class="profile__item-link" href="tel:+380502869460">
-                                    <svg class="profile__item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
-                                    </svg>
-                                    <span class="profile__item-text">+380 502869460</span>
-                                </a>
-                            </li>
-                            <li class="profile__item">
-                                <a class="profile__item-link" href="https://www.google.com/maps/place/Lviv,+Lviv+Oblast,+79000/@49.8326046,23.8721529,11z/data=!3m1!4b1!4m5!3m4!1s0x473add7c09109a57:0x4223c517012378e2!8m2!3d49.839683!4d24.029717">
-                                    <svg class="profile__item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                        <path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-                                    </svg>
-                                    <span class="profile__item-text">Lviv, Ukraina</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="education">
-                        <h2 class="title">Education</h2>
-                        <ul class="education__items">
-                            <li class="education__item">
-                                <div class="education__item-prof">Self-Study<span class="education__item-date">Always</span></div>
-                            </li>
-                            <li class="education__item">
-                                <div class="education__item-prof">Javascript for HTML/CSS developer<span class="education__item-date">2021</span></div>
-                                <div class="education__item-inst">Markup academy</div>
-                            </li>
-                            <li class="education__item">
-                                <div class="education__item-prof">HTML and CSS<span class="education__item-date">2020</span></div>
-                                <div class="education__item-inst">Solorern</div>
-                            </li>
-                            <li class="education__item">
-                                <div class="education__item-prof">Profession: Business Economics<span class="education__item-date">2004 - 2010</span></div>
-                                <div class="education__item-inst">Galician Academy</div>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="lang">
-                        <h2 class="title">Languages</h2>
-                        <ul class="lang__items">
-                            <li class="lang__item">
-                                <img class="lang__item-ico" src="img/english.png" alt="english">
-                                <span class="lang__item-country">English - Elementary</span>
-                            </li>
-                            <li class="lang__item">
-                                <img class="lang__item-ico" src="img/ukraine.png" alt="ukraine">
-                                <span class="lang__item-country">Ukrainian</span>
-                            </li>
-                            <li class="lang__item">
-                                <img class="lang__item-ico" src="img/russia.png" alt="russia">
-                                <span class="lang__item-country">Russian</span>
-                            </li>
-                        </ul>
-                    </section>                    
-                </div>
-                <div class="main-right">
-                    <section class="skill">
-                        <h2 class="title">Skill</h2>
-                        <ul class="skill__items">
-                            <li class="skill__item">
-                                HTML5 / CSS / SCSS
-                            </li>
-                            <li class="skill__item">
-                                JavaScript / Ajax / JQuery
-                            </li>
-                            <li class="skill__item">
-                                BEM / Mobile first / Bootstrap
-                            </li>
-                            <li class="skill__item">
-                                Gulp / NPM
-                            </li>
-                            <li class="skill__item">
-                                Figma / Photoshop / Avocode
-                            </li>
-                            <li class="skill__item">
-                                Git / GitHub / Open Server
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="project">
-                        <h2 class="title">Projects</h2>
-                        <div class="project__item">
-                            <a class="project__item-title" href="https://oleksandrvolodimirovich.github.io/LandingDoma/">DOMA</a>
-                            <ul class="project__item-inner">
-                                <li class="project__item-subtitle">Landing Page for the sale of goods</li>
-                                <li class="project__item-text">
-                                    <ul>
-                                        <li class="project__item-disc">HTML5 / CSS3</li>
-                                        <li class="project__item-disc">JQuery / kinetic.js / final-countdown.js</li>
-                                        <li class="project__item-disc">pixelPerfect</li>
-                                        <li class="project__item-disc">mailer.php</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="project__item">
-                            <a class="project__item-title"  href="https://oleksandrvolodimirovich.github.io/delivery-food/">Delivery Food</a>
-                            <ul class="project__item-inner">
-                                <li class="project__item-subtitle">online food delivery service</li>
-                                <li class="project__item-text">
-                                    <ul>
-                                        <li class="project__item-disc">HTML5 / CSS3</li>
-                                        <li class="project__item-disc">JavaScript</li>
-                                        <li class="project__item-disc">Fetch / Ajax / Json</li>
-                                        <li class="project__item-disc">localStorage</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="project__item">
-                            <a class="project__item-title" href="https://oleksandrvolodimirovich.github.io/iTunes/">ЯTunes</a>
-                            <ul class="project__item-inner">
-                                <li class="project__item-subtitle">media player for video, music and radio</li>
-                                <li class="project__item-text">
-                                    <ul>
-                                        <li class="project__item-disc">HTML5 / CSS3</li>
-                                        <li class="project__item-disc">JavaScript</li>
-                                        <li class="project__item-disc">JavaScript modules</li>
-                                        <li class="project__item-disc">normalize.css / font-awesome</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section class="experience">
-                        <h2 class="title">Experience</h2>
-                        <ul class="experience__items">
-                            <li class="experience__item experience__item-left">
-                                <span class="experience__item-title">Freelance</span>
-                            </li>
-                            <li class="experience__item experience__item-right">
-                                <span class="experience__item-subtitle">2020 - for now</span>
-                            </li>
-                        </ul>
-                        <ul class="experience__items">
-                            <li class="experience__item experience__item-left">
-                                <span class="experience__item-title">Operator</span>
-                            </li>
-                            <li class="experience__item experience__item-right">
-                                <span class="experience__item-subtitle">Arterium LTD (2010 - for now)</span>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__wrapper">
-                <a class="footer__rsschool" href="https://rs.school/js/">
-                    <svg class="footer__rsschool-svg"  id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 552.8 205.3">
-                        <style>.st0{fill:#fff}.st1{clip-path:url(#SVGID_2_)}.st2{clip-path:url(#SVGID_4_)}.st3{clip-path:url(#SVGID_6_)}.st4{clip-path:url(#SVGID_8_)}.st5{fill:#fff;stroke:#000;stroke-width:4;stroke-miterlimit:10}.st6{clip-path:url(#SVGID_8_)}.st6,.st7{fill:none;stroke:#000;stroke-width:4;stroke-miterlimit:10}.st8,.st9{clip-path:url(#SVGID_10_)}.st9{fill:none;stroke:#000;stroke-width:4;stroke-miterlimit:10}</style><title>rs_school_js</title>
-                        <path d="M285.4 68l26.3-1.7c.6 4.3 1.7 7.5 3.5 9.8 2.9 3.6 6.9 5.4 12.2 5.4 3.9 0 7-.9 9.1-2.8 2-1.5 3.2-3.9 3.2-6.4 0-2.4-1.1-4.7-3-6.2-2-1.8-6.7-3.6-14.1-5.2-12.1-2.7-20.8-6.3-25.9-10.9-5.1-4.3-8-10.6-7.8-17.3 0-4.6 1.4-9.2 4-13 3-4.3 7.1-7.7 12-9.6 5.3-2.3 12.7-3.5 22-3.5 11.4 0 20.1 2.1 26.1 6.4 6 4.2 9.6 11 10.7 20.3l-26 1.5c-.7-4-2.1-6.9-4.4-8.8s-5.3-2.8-9.2-2.8c-3.2 0-5.6.7-7.2 2-1.5 1.2-2.5 3-2.4 5 0 1.5.8 2.9 2 3.8 1.3 1.2 4.4 2.3 9.3 3.3 12.1 2.6 20.7 5.2 26 7.9 5.3 2.7 9.1 6 11.4 9.9 2.4 4 3.6 8.6 3.5 13.3 0 5.6-1.6 11.2-4.8 15.9-3.3 4.9-7.9 8.7-13.3 11-5.7 2.5-12.9 3.8-21.5 3.8-15.2 0-25.7-2.9-31.6-8.8S286.1 77 285.4 68zM6.3 97.6V8.2h46.1c8.5 0 15.1.7 19.6 2.2 4.4 1.4 8.3 4.3 10.9 8.2 2.9 4.3 4.3 9.3 4.2 14.5.3 8.8-4.2 17.2-11.9 21.6-3 1.7-6.3 2.9-9.7 3.5 2.5.7 5 1.9 7.2 3.3 1.7 1.4 3.1 3 4.4 4.7 1.5 1.7 2.8 3.6 3.9 5.6l13.4 25.9H63L48.2 70.2c-1.9-3.5-3.5-5.8-5-6.9-2-1.4-4.4-2.1-6.8-2.1H34v36.3H6.3zM34 44.4h11.7c2.5-.2 4.9-.6 7.3-1.2 1.8-.3 3.4-1.3 4.5-2.8 2.7-3.6 2.3-8.7-1-11.8-1.8-1.5-5.3-2.3-10.3-2.3H34v18.1zM0 174.2l26.3-1.7c.6 4.3 1.7 7.5 3.5 9.8 2.8 3.6 6.9 5.5 12.2 5.5 3.9 0 7-.9 9.1-2.8 2-1.6 3.2-3.9 3.2-6.4 0-2.4-1.1-4.7-3-6.2-2-1.8-6.7-3.6-14.2-5.2-12.1-2.7-20.8-6.3-25.9-10.9-5.1-4.3-8-10.6-7.8-17.3 0-4.6 1.4-9.2 4-13 3-4.3 7.1-7.7 12-9.6 5.3-2.3 12.7-3.5 22-3.5 11.4 0 20.1 2.1 26.1 6.4s9.5 11 10.6 20.3l-26 1.5c-.7-4-2.1-6.9-4.4-8.8-2.2-1.9-5.3-2.8-9.2-2.7-3.2 0-5.6.7-7.2 2.1-1.6 1.2-2.5 3-2.4 5 0 1.5.8 2.9 2 3.8 1.3 1.2 4.4 2.3 9.3 3.3 12.1 2.6 20.7 5.2 26 7.9 5.3 2.7 9.1 6 11.4 9.9 2.4 4 3.6 8.6 3.6 13.2 0 5.6-1.7 11.1-4.8 15.8-3.3 4.9-7.9 8.7-13.3 11-5.7 2.5-12.9 3.8-21.5 3.8-15.2 0-25.7-2.9-31.6-8.8-5.9-6-9.2-13.4-10-22.4z"/><path d="M133 167.2l24.2 7.3c-1.3 6.1-4 11.9-7.7 17-3.4 4.5-7.9 8-13 10.3-5.2 2.3-11.8 3.5-19.8 3.5-9.7 0-17.7-1.4-23.8-4.2-6.2-2.8-11.5-7.8-16-14.9-4.5-7.1-6.7-16.2-6.7-27.3 0-14.8 3.9-26.2 11.8-34.1s19-11.9 33.4-11.9c11.3 0 20.1 2.3 26.6 6.8 6.4 4.6 11.2 11.6 14.4 21l-24.4 5.4c-.6-2.1-1.5-4.2-2.7-6-1.5-2.1-3.4-3.7-5.7-4.9-2.3-1.2-4.9-1.7-7.5-1.7-6.3 0-11.1 2.5-14.4 7.6-2.5 3.7-3.8 9.6-3.8 17.6 0 9.9 1.5 16.7 4.5 20.4 3 3.7 7.2 5.5 12.7 5.5 5.3 0 9.3-1.5 12-4.4 2.7-3.1 4.7-7.4 5.9-13zm56.5-52.8h27.6v31.3h30.2v-31.3h27.8v89.4h-27.8v-36.2h-30.2v36.2h-27.6v-89.4z"/><path d="M271.3 159.1c0-14.6 4.1-26 12.2-34.1 8.1-8.1 19.5-12.2 34-12.2 14.9 0 26.3 4 34.4 12S364 144 364 158.4c0 10.5-1.8 19-5.3 25.7-3.4 6.6-8.7 12-15.2 15.6-6.7 3.7-15 5.6-24.9 5.6-10.1 0-18.4-1.6-25-4.8-6.8-3.4-12.4-8.7-16.1-15.2-4.1-7-6.2-15.7-6.2-26.2zm27.6.1c0 9 1.7 15.5 5 19.5 3.3 3.9 7.9 5.9 13.7 5.9 5.9 0 10.5-1.9 13.8-5.8s4.9-10.8 4.9-20.8c0-8.4-1.7-14.6-5.1-18.4-3.4-3.9-8-5.8-13.8-5.8-5.1-.2-10 2-13.4 5.9-3.4 3.9-5.1 10.4-5.1 19.5zm93.4-.1c0-14.6 4.1-26 12.2-34.1 8.1-8.1 19.5-12.2 34-12.2 14.9 0 26.4 4 34.4 12S485 144 485 158.4c0 10.5-1.8 19-5.3 25.7-3.4 6.6-8.7 12-15.2 15.6-6.7 3.7-15 5.6-24.9 5.6-10.1 0-18.4-1.6-25-4.8-6.8-3.4-12.4-8.7-16.1-15.2-4.1-7-6.2-15.7-6.2-26.2zm27.6.1c0 9 1.7 15.5 5 19.5 3.3 3.9 7.9 5.9 13.7 5.9 5.9 0 10.5-1.9 13.8-5.8 3.3-3.9 4.9-10.8 4.9-20.8 0-8.4-1.7-14.6-5.1-18.4-3.4-3.9-8-5.8-13.8-5.8-5.1-.2-10.1 2-13.4 5.9-3.4 3.9-5.1 10.4-5.1 19.5z"/><path d="M482.1 114.4h27.6v67.4h43.1v22H482v-89.4z"/><ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5" cy="67.9" rx="63" ry="51.8"/><defs><ellipse id="SVGID_1_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9" rx="63" ry="51.8"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><g class="st1"><path transform="rotate(-37.001 420.82 68.353)" class="st0" d="M330.9-14.2h179.8v165.1H330.9z"/><g id="Layer_2_1_"><defs><path id="SVGID_3_" transform="rotate(-37.001 420.82 68.353)" d="M330.9-14.2h179.8v165.1H330.9z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" overflow="visible"/></clipPath><g id="Layer_1-2" class="st2"><ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5" cy="67.9" rx="63" ry="51.8"/><defs><ellipse id="SVGID_5_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9" rx="63" ry="51.8"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" overflow="visible"/></clipPath><g class="st3"><path transform="rotate(-37 420.799 68.802)" class="st0" d="M357.8 17h125.9v103.7H357.8z"/><defs><path id="SVGID_7_" transform="rotate(-37 420.799 68.802)" d="M357.8 17h125.9v103.7H357.8z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" overflow="visible"/></clipPath><g class="st4"><ellipse transform="rotate(-37.001 420.46 67.88)" class="st5" cx="420.5" cy="67.9" rx="63" ry="51.8"/></g><path transform="rotate(-37 420.799 68.802)" class="st6" d="M357.8 17h125.9v103.7H357.8z"/><ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5" cy="67.9" rx="63" ry="51.8"/><path transform="rotate(-37 420.799 68.802)" class="st0" d="M357.8 17h125.9v103.7H357.8z"/><defs><path id="SVGID_9_" transform="rotate(-37 420.799 68.802)" d="M357.8 17h125.9v103.7H357.8z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" overflow="visible"/></clipPath><g class="st8"><ellipse transform="rotate(-37.001 420.46 67.88)" class="st5" cx="420.5" cy="67.9" rx="63" ry="51.8"/></g><path transform="rotate(-37 420.799 68.802)" class="st9" d="M357.8 17h125.9v103.7H357.8z"/><path transform="rotate(-37.001 420.82 68.353)" class="st7" d="M330.9-14.2h179.8v165.1H330.9z"/></g><ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5" cy="67.9" rx="63" ry="51.8"/><path d="M392.4 61.3l10-7 12.3 17.5c2.1 2.8 3.7 5.8 4.9 9.1.7 2.5.5 5.2-.5 7.6-1.3 3-3.4 5.5-6.2 7.3-3.3 2.3-6.1 3.6-8.5 4-2.3.4-4.7 0-6.9-1-2.4-1.2-4.5-2.9-6.1-5.1l8.6-8c.7 1.1 1.6 2.1 2.6 2.9.7.5 1.5.8 2.4.8.7 0 1.4-.3 1.9-.7 1-.6 1.7-1.8 1.6-3-.3-1.7-1-3.4-2.1-4.7l-14-19.7zm30 11.1l9.1-7.2c1 1.2 2.3 2.1 3.7 2.6 2 .6 4.1.2 5.8-1.1 1.2-.8 2.2-1.9 2.6-3.3.6-1.8-.4-3.8-2.2-4.4-.3-.1-.6-.2-.9-.2-1.2-.1-3.3.4-6.4 1.7-5.1 2.1-9.1 2.9-12.1 2.6-2.9-.3-5.6-1.8-7.2-4.3-1.2-1.7-1.8-3.7-1.9-5.7 0-2.3.6-4.6 1.9-6.5 1.9-2.7 4.2-5 7-6.8 4.2-2.9 7.9-4.3 11.1-4.3 3.2 0 6.2 1.5 9 4.6l-9 7.1c-1.8-2.3-5.2-2.8-7.5-1l-.3.3c-1 .6-1.7 1.5-2.1 2.6-.3.8-.1 1.7.4 2.4.4.5 1 .9 1.7.9.8.1 2.2-.3 4.2-1.2 5-2.1 8.8-3.3 11.4-3.7 2.2-.4 4.5-.2 6.6.7 1.9.8 3.5 2.2 4.6 3.9 1.4 2 2.2 4.4 2.3 6.9.1 2.6-.6 5.1-2 7.3-1.8 2.7-4.1 5-6.8 6.8-5.5 3.8-10 5.4-13.6 4.8-3.9-.6-7.1-2.6-9.4-5.5z"/></g></g></g>
-                    </svg>
-                </a>
-                <span class="footer__copy">copyright © 2021</span>
-                <a class="info__contact-link" href="https://github.com/OleksandrVolodimirovich">
-                    <svg class="info__contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                        <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </footer>
+        </header>
     
+        <main class="main">
+            <div class="container">
+                <div class="main__wrapper">
+                    <div class="main-left">
+                        <section class="profile" id="profile">
+                            <h2 class="title">Profile</h2>
+                            <summary class="profile__text">
+                                I am a Front-End developer looking for work with projects interesting. I like to delve into the essence of different technologies to understand the principles of their work. It helps me progress quickly and effectively. The main goal is to study as much as possible and consolidate the acquired knowledge in practice.
+                            </summary>
+                            <ul class="profile__items">
+                                <li class="profile__item">
+                                    <a class="profile__item-link" href="mailto:net_box@ukr.net">
+                                        <svg class="profile__item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"></path>
+                                        </svg>
+                                        <span class="profile__item-text">net_box@ukr.net</span>
+                                    </a>
+                                </li>
+                                <li class="profile__item">
+                                    <a class="profile__item-link" href="tel:+380502869460">
+                                        <svg class="profile__item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
+                                        </svg>
+                                        <span class="profile__item-text">+380 502869460</span>
+                                    </a>
+                                </li>
+                                <li class="profile__item">
+                                    <a class="profile__item-link" href="https://www.google.com/maps/place/Lviv,+Lviv+Oblast,+79000/@49.8326046,23.8721529,11z/data=!3m1!4b1!4m5!3m4!1s0x473add7c09109a57:0x4223c517012378e2!8m2!3d49.839683!4d24.029717">
+                                        <svg class="profile__item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                                        </svg>
+                                        <span class="profile__item-text">Lviv, Ukraina</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="education" id="education">
+                            <h2 class="title" id="education">Education</h2>
+                            <ul class="education__items">
+                                <li class="education__item">
+                                    <div class="education__item-prof">Self-Study<span class="education__item-date">Always</span></div>
+                                </li>
+                                <li class="education__item">
+                                    <div class="education__item-prof">Javascript for HTML/CSS developer<span class="education__item-date">2021</span></div>
+                                    <div class="education__item-inst">Markup academy</div>
+                                </li>
+                                <li class="education__item">
+                                    <div class="education__item-prof">HTML and CSS<span class="education__item-date">2020</span></div>
+                                    <div class="education__item-inst">Solorern</div>
+                                </li>
+                                <li class="education__item">
+                                    <div class="education__item-prof">Profession: Business Economics<span class="education__item-date">2004 - 2010</span></div>
+                                    <div class="education__item-inst">Galician Academy</div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="lang" id="lang">
+                            <h2 class="title">Languages</h2>
+                            <ul class="lang__items">
+                                <li class="lang__item">
+                                    <img class="lang__item-ico" src="img/english.png" alt="english">
+                                    <span class="lang__item-country">English - Elementary</span>
+                                </li>
+                                <li class="lang__item">
+                                    <img class="lang__item-ico" src="img/ukraine.png" alt="ukraine">
+                                    <span class="lang__item-country">Ukrainian</span>
+                                </li>
+                                <li class="lang__item">
+                                    <img class="lang__item-ico" src="img/russia.png" alt="russia">
+                                    <span class="lang__item-country">Russian</span>
+                                </li>
+                            </ul>
+                        </section>
+<section class="code" id="code">
+    <h3 class="title">Preview code</h3>
+    <pre>
+        <code>
+    const prevTrack = () => {
+        if (trackIndex !== 0) {
+            trackIndex--;
+        } else {
+            trackIndex = playlist.length - 1;
+        }
+        loadTrack();
+    };
+
+    const nextTrack = () => {
+        if (trackIndex === playlist.length - 1) {
+            trackIndex = 0;
+        } else {
+            trackIndex++;
+        }
+        loadTrack();
+    };
+        </code>
+    </pre>
+</section>
+                    </div>
+                    <div class="main-right">
+                        <section class="skill" id="skill">
+                            <h2 class="title">Skill</h2>
+                            <ul class="skill__items">
+                                <li class="skill__item">
+                                    HTML5 / CSS / SCSS
+                                </li>
+                                <li class="skill__item">
+                                    JavaScript / Ajax / JQuery
+                                </li>
+                                <li class="skill__item">
+                                    BEM / Mobile first / Bootstrap
+                                </li>
+                                <li class="skill__item">
+                                    Gulp / NPM
+                                </li>
+                                <li class="skill__item">
+                                    Figma / Photoshop / Avocode
+                                </li>
+                                <li class="skill__item">
+                                    Git / GitHub / Open Server
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="project" id="project">
+                            <h2 class="title">Projects</h2>
+                            <div class="project__item">
+                                <a class="project__item-title" href="https://oleksandrvolodimirovich.github.io/LandingDoma/" target="_blank">DOMA</a>
+                                <ul class="project__item-inner">
+                                    <li class="project__item-subtitle">Landing Page for the sale of goods</li>
+                                    <li class="project__item-text">
+                                        <ul>
+                                            <li class="project__item-disc">HTML5 / CSS3</li>
+                                            <li class="project__item-disc">JQuery / kinetic.js / final-countdown.js</li>
+                                            <li class="project__item-disc">pixelPerfect</li>
+                                            <li class="project__item-disc">mailer.php</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="project__item">
+                                <a class="project__item-title"  href="https://oleksandrvolodimirovich.github.io/delivery-food/" target="_blank">Delivery Food</a>
+                                <ul class="project__item-inner">
+                                    <li class="project__item-subtitle">online food delivery service</li>
+                                    <li class="project__item-text">
+                                        <ul>
+                                            <li class="project__item-disc">HTML5 / CSS3</li>
+                                            <li class="project__item-disc">JavaScript</li>
+                                            <li class="project__item-disc">Fetch / Ajax / Json</li>
+                                            <li class="project__item-disc">localStorage</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="project__item">
+                                <a class="project__item-title" href="https://oleksandrvolodimirovich.github.io/iTunes/" target="_blank">ЯTunes</a>
+                                <ul class="project__item-inner">
+                                    <li class="project__item-subtitle">media player for video, music and radio</li>
+                                    <li class="project__item-text">
+                                        <ul>
+                                            <li class="project__item-disc">HTML5 / CSS3</li>
+                                            <li class="project__item-disc">JavaScript</li>
+                                            <li class="project__item-disc">JavaScript modules</li>
+                                            <li class="project__item-disc">normalize.css / font-awesome</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="experience" id="experience">
+                            <h2 class="title">Experience</h2>
+                            <ul class="experience__items">
+                                <li class="experience__item experience__item-left">
+                                    <span class="experience__item-title">Freelance</span>
+                                </li>
+                                <li class="experience__item experience__item-right">
+                                    <span class="experience__item-subtitle">2020 - for now</span>
+                                </li>
+                            </ul>
+                            <ul class="experience__items">
+                                <li class="experience__item experience__item-left">
+                                    <span class="experience__item-title">Operator</span>
+                                </li>
+                                <li class="experience__item experience__item-right">
+                                    <span class="experience__item-subtitle">Arterium LTD (2010 - for now)</span>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <a class="footer__rsschool" href="https://rs.school/js/">
+                        <svg class="footer__rsschool-svg"  id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 552.8 205.3">
+                            <style>.st0{fill:#fff}.st1{clip-path:url(#SVGID_2_)}.st2{clip-path:url(#SVGID_4_)}.st3{clip-path:url(#SVGID_6_)}.st4{clip-path:url(#SVGID_8_)}.st5{fill:#fff;stroke:#000;stroke-width:4;stroke-miterlimit:10}.st6{clip-path:url(#SVGID_8_)}.st6,.st7{fill:none;stroke:#000;stroke-width:4;stroke-miterlimit:10}.st8,.st9{clip-path:url(#SVGID_10_)}.st9{fill:none;stroke:#000;stroke-width:4;stroke-miterlimit:10}</style><title>rs_school_js</title>
+                            <path d="M285.4 68l26.3-1.7c.6 4.3 1.7 7.5 3.5 9.8 2.9 3.6 6.9 5.4 12.2 5.4 3.9 0 7-.9 9.1-2.8 2-1.5 3.2-3.9 3.2-6.4 0-2.4-1.1-4.7-3-6.2-2-1.8-6.7-3.6-14.1-5.2-12.1-2.7-20.8-6.3-25.9-10.9-5.1-4.3-8-10.6-7.8-17.3 0-4.6 1.4-9.2 4-13 3-4.3 7.1-7.7 12-9.6 5.3-2.3 12.7-3.5 22-3.5 11.4 0 20.1 2.1 26.1 6.4 6 4.2 9.6 11 10.7 20.3l-26 1.5c-.7-4-2.1-6.9-4.4-8.8s-5.3-2.8-9.2-2.8c-3.2 0-5.6.7-7.2 2-1.5 1.2-2.5 3-2.4 5 0 1.5.8 2.9 2 3.8 1.3 1.2 4.4 2.3 9.3 3.3 12.1 2.6 20.7 5.2 26 7.9 5.3 2.7 9.1 6 11.4 9.9 2.4 4 3.6 8.6 3.5 13.3 0 5.6-1.6 11.2-4.8 15.9-3.3 4.9-7.9 8.7-13.3 11-5.7 2.5-12.9 3.8-21.5 3.8-15.2 0-25.7-2.9-31.6-8.8S286.1 77 285.4 68zM6.3 97.6V8.2h46.1c8.5 0 15.1.7 19.6 2.2 4.4 1.4 8.3 4.3 10.9 8.2 2.9 4.3 4.3 9.3 4.2 14.5.3 8.8-4.2 17.2-11.9 21.6-3 1.7-6.3 2.9-9.7 3.5 2.5.7 5 1.9 7.2 3.3 1.7 1.4 3.1 3 4.4 4.7 1.5 1.7 2.8 3.6 3.9 5.6l13.4 25.9H63L48.2 70.2c-1.9-3.5-3.5-5.8-5-6.9-2-1.4-4.4-2.1-6.8-2.1H34v36.3H6.3zM34 44.4h11.7c2.5-.2 4.9-.6 7.3-1.2 1.8-.3 3.4-1.3 4.5-2.8 2.7-3.6 2.3-8.7-1-11.8-1.8-1.5-5.3-2.3-10.3-2.3H34v18.1zM0 174.2l26.3-1.7c.6 4.3 1.7 7.5 3.5 9.8 2.8 3.6 6.9 5.5 12.2 5.5 3.9 0 7-.9 9.1-2.8 2-1.6 3.2-3.9 3.2-6.4 0-2.4-1.1-4.7-3-6.2-2-1.8-6.7-3.6-14.2-5.2-12.1-2.7-20.8-6.3-25.9-10.9-5.1-4.3-8-10.6-7.8-17.3 0-4.6 1.4-9.2 4-13 3-4.3 7.1-7.7 12-9.6 5.3-2.3 12.7-3.5 22-3.5 11.4 0 20.1 2.1 26.1 6.4s9.5 11 10.6 20.3l-26 1.5c-.7-4-2.1-6.9-4.4-8.8-2.2-1.9-5.3-2.8-9.2-2.7-3.2 0-5.6.7-7.2 2.1-1.6 1.2-2.5 3-2.4 5 0 1.5.8 2.9 2 3.8 1.3 1.2 4.4 2.3 9.3 3.3 12.1 2.6 20.7 5.2 26 7.9 5.3 2.7 9.1 6 11.4 9.9 2.4 4 3.6 8.6 3.6 13.2 0 5.6-1.7 11.1-4.8 15.8-3.3 4.9-7.9 8.7-13.3 11-5.7 2.5-12.9 3.8-21.5 3.8-15.2 0-25.7-2.9-31.6-8.8-5.9-6-9.2-13.4-10-22.4z"/><path d="M133 167.2l24.2 7.3c-1.3 6.1-4 11.9-7.7 17-3.4 4.5-7.9 8-13 10.3-5.2 2.3-11.8 3.5-19.8 3.5-9.7 0-17.7-1.4-23.8-4.2-6.2-2.8-11.5-7.8-16-14.9-4.5-7.1-6.7-16.2-6.7-27.3 0-14.8 3.9-26.2 11.8-34.1s19-11.9 33.4-11.9c11.3 0 20.1 2.3 26.6 6.8 6.4 4.6 11.2 11.6 14.4 21l-24.4 5.4c-.6-2.1-1.5-4.2-2.7-6-1.5-2.1-3.4-3.7-5.7-4.9-2.3-1.2-4.9-1.7-7.5-1.7-6.3 0-11.1 2.5-14.4 7.6-2.5 3.7-3.8 9.6-3.8 17.6 0 9.9 1.5 16.7 4.5 20.4 3 3.7 7.2 5.5 12.7 5.5 5.3 0 9.3-1.5 12-4.4 2.7-3.1 4.7-7.4 5.9-13zm56.5-52.8h27.6v31.3h30.2v-31.3h27.8v89.4h-27.8v-36.2h-30.2v36.2h-27.6v-89.4z"/><path d="M271.3 159.1c0-14.6 4.1-26 12.2-34.1 8.1-8.1 19.5-12.2 34-12.2 14.9 0 26.3 4 34.4 12S364 144 364 158.4c0 10.5-1.8 19-5.3 25.7-3.4 6.6-8.7 12-15.2 15.6-6.7 3.7-15 5.6-24.9 5.6-10.1 0-18.4-1.6-25-4.8-6.8-3.4-12.4-8.7-16.1-15.2-4.1-7-6.2-15.7-6.2-26.2zm27.6.1c0 9 1.7 15.5 5 19.5 3.3 3.9 7.9 5.9 13.7 5.9 5.9 0 10.5-1.9 13.8-5.8s4.9-10.8 4.9-20.8c0-8.4-1.7-14.6-5.1-18.4-3.4-3.9-8-5.8-13.8-5.8-5.1-.2-10 2-13.4 5.9-3.4 3.9-5.1 10.4-5.1 19.5zm93.4-.1c0-14.6 4.1-26 12.2-34.1 8.1-8.1 19.5-12.2 34-12.2 14.9 0 26.4 4 34.4 12S485 144 485 158.4c0 10.5-1.8 19-5.3 25.7-3.4 6.6-8.7 12-15.2 15.6-6.7 3.7-15 5.6-24.9 5.6-10.1 0-18.4-1.6-25-4.8-6.8-3.4-12.4-8.7-16.1-15.2-4.1-7-6.2-15.7-6.2-26.2zm27.6.1c0 9 1.7 15.5 5 19.5 3.3 3.9 7.9 5.9 13.7 5.9 5.9 0 10.5-1.9 13.8-5.8 3.3-3.9 4.9-10.8 4.9-20.8 0-8.4-1.7-14.6-5.1-18.4-3.4-3.9-8-5.8-13.8-5.8-5.1-.2-10.1 2-13.4 5.9-3.4 3.9-5.1 10.4-5.1 19.5z"/><path d="M482.1 114.4h27.6v67.4h43.1v22H482v-89.4z"/><ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5" cy="67.9" rx="63" ry="51.8"/><defs><ellipse id="SVGID_1_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9" rx="63" ry="51.8"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><g class="st1"><path transform="rotate(-37.001 420.82 68.353)" class="st0" d="M330.9-14.2h179.8v165.1H330.9z"/><g id="Layer_2_1_"><defs><path id="SVGID_3_" transform="rotate(-37.001 420.82 68.353)" d="M330.9-14.2h179.8v165.1H330.9z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" overflow="visible"/></clipPath><g id="Layer_1-2" class="st2"><ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5" cy="67.9" rx="63" ry="51.8"/><defs><ellipse id="SVGID_5_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9" rx="63" ry="51.8"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" overflow="visible"/></clipPath><g class="st3"><path transform="rotate(-37 420.799 68.802)" class="st0" d="M357.8 17h125.9v103.7H357.8z"/><defs><path id="SVGID_7_" transform="rotate(-37 420.799 68.802)" d="M357.8 17h125.9v103.7H357.8z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" overflow="visible"/></clipPath><g class="st4"><ellipse transform="rotate(-37.001 420.46 67.88)" class="st5" cx="420.5" cy="67.9" rx="63" ry="51.8"/></g><path transform="rotate(-37 420.799 68.802)" class="st6" d="M357.8 17h125.9v103.7H357.8z"/><ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5" cy="67.9" rx="63" ry="51.8"/><path transform="rotate(-37 420.799 68.802)" class="st0" d="M357.8 17h125.9v103.7H357.8z"/><defs><path id="SVGID_9_" transform="rotate(-37 420.799 68.802)" d="M357.8 17h125.9v103.7H357.8z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" overflow="visible"/></clipPath><g class="st8"><ellipse transform="rotate(-37.001 420.46 67.88)" class="st5" cx="420.5" cy="67.9" rx="63" ry="51.8"/></g><path transform="rotate(-37 420.799 68.802)" class="st9" d="M357.8 17h125.9v103.7H357.8z"/><path transform="rotate(-37.001 420.82 68.353)" class="st7" d="M330.9-14.2h179.8v165.1H330.9z"/></g><ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5" cy="67.9" rx="63" ry="51.8"/><path d="M392.4 61.3l10-7 12.3 17.5c2.1 2.8 3.7 5.8 4.9 9.1.7 2.5.5 5.2-.5 7.6-1.3 3-3.4 5.5-6.2 7.3-3.3 2.3-6.1 3.6-8.5 4-2.3.4-4.7 0-6.9-1-2.4-1.2-4.5-2.9-6.1-5.1l8.6-8c.7 1.1 1.6 2.1 2.6 2.9.7.5 1.5.8 2.4.8.7 0 1.4-.3 1.9-.7 1-.6 1.7-1.8 1.6-3-.3-1.7-1-3.4-2.1-4.7l-14-19.7zm30 11.1l9.1-7.2c1 1.2 2.3 2.1 3.7 2.6 2 .6 4.1.2 5.8-1.1 1.2-.8 2.2-1.9 2.6-3.3.6-1.8-.4-3.8-2.2-4.4-.3-.1-.6-.2-.9-.2-1.2-.1-3.3.4-6.4 1.7-5.1 2.1-9.1 2.9-12.1 2.6-2.9-.3-5.6-1.8-7.2-4.3-1.2-1.7-1.8-3.7-1.9-5.7 0-2.3.6-4.6 1.9-6.5 1.9-2.7 4.2-5 7-6.8 4.2-2.9 7.9-4.3 11.1-4.3 3.2 0 6.2 1.5 9 4.6l-9 7.1c-1.8-2.3-5.2-2.8-7.5-1l-.3.3c-1 .6-1.7 1.5-2.1 2.6-.3.8-.1 1.7.4 2.4.4.5 1 .9 1.7.9.8.1 2.2-.3 4.2-1.2 5-2.1 8.8-3.3 11.4-3.7 2.2-.4 4.5-.2 6.6.7 1.9.8 3.5 2.2 4.6 3.9 1.4 2 2.2 4.4 2.3 6.9.1 2.6-.6 5.1-2 7.3-1.8 2.7-4.1 5-6.8 6.8-5.5 3.8-10 5.4-13.6 4.8-3.9-.6-7.1-2.6-9.4-5.5z"/></g></g></g>
+                        </svg>
+                    </a>
+                    <span class="footer__copy">copyright © 2021</span>
+                    <a class="info__contact-link" href="https://github.com/OleksandrVolodimirovich">
+                        <svg class="info__contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                            <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
 
